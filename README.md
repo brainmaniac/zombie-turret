@@ -2,3 +2,11 @@
 
 # zombie-turret
 This is the coolest IRL zombie turret game ever
+
+## Install
+```
+yarn
+yarn start
+```
+
+Created by following [this tutorial](https://www.codica.com/blog/how-to-create-pwa-with-react/)
