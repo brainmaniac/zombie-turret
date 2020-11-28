@@ -22,14 +22,21 @@ function Map() {
         >
             <MapContext.Consumer>
                 {(map) => {
-                    map.addControl(
-                        new mapboxgl.GeolocateControl({
-                            positionOptions: {
-                                enableHighAccuracy: true
-                            },
-                            trackUserLocation: true
-                        })
-                    )
+
+                    let geolocate = new mapboxgl.GeolocateControl({
+                        positionOptions: {
+                            enableHighAccuracy: true
+                        },
+                        trackUserLocation: true
+                    })
+
+                    map.addControl(geolocate);                   
+
+                    setTimeout(() => {
+                        geolocate.trigger();
+                    }, 1000);
+                    
+                    
                 }}
             </MapContext.Consumer>
         </MapboxMap>
