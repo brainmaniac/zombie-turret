@@ -10,3 +10,9 @@ yarn start
 ```
 
 Created by following [this tutorial](https://www.codica.com/blog/how-to-create-pwa-with-react/)
+
+## Github pages
+
+You can see the latest build of the app on `https://brainmaniac.github.io/zombie-turret/`
+
+If you want to deploy a new version there just commit your new changes to `main` and then run `yarn run deploy` localy in your terminal to make those changes go live on the github page.
