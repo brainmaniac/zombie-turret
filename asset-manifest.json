@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/zombie-turret/static/css/main.2ae6e9da.chunk.css",
+    "main.js": "/zombie-turret/static/js/main.eabfc8f9.chunk.js",
+    "main.js.map": "/zombie-turret/static/js/main.eabfc8f9.chunk.js.map",
+    "runtime-main.js": "/zombie-turret/static/js/runtime-main.13af575e.js",
+    "runtime-main.js.map": "/zombie-turret/static/js/runtime-main.13af575e.js.map",
+    "static/js/2.149cc9af.chunk.js": "/zombie-turret/static/js/2.149cc9af.chunk.js",
+    "static/js/2.149cc9af.chunk.js.map": "/zombie-turret/static/js/2.149cc9af.chunk.js.map",
+    "static/js/3.c24460d9.chunk.js": "/zombie-turret/static/js/3.c24460d9.chunk.js",
+    "static/js/3.c24460d9.chunk.js.map": "/zombie-turret/static/js/3.c24460d9.chunk.js.map",
+    "index.html": "/zombie-turret/index.html",
+    "service-worker.js": "/zombie-turret/service-worker.js",
+    "service-worker.js.map": "/zombie-turret/service-worker.js.map",
+    "static/css/main.2ae6e9da.chunk.css.map": "/zombie-turret/static/css/main.2ae6e9da.chunk.css.map",
+    "static/js/2.149cc9af.chunk.js.LICENSE.txt": "/zombie-turret/static/js/2.149cc9af.chunk.js.LICENSE.txt",
+    "static/media/logo.103b5fa1.svg": "/zombie-turret/static/media/logo.103b5fa1.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.13af575e.js",
+    "static/js/2.149cc9af.chunk.js",
+    "static/css/main.2ae6e9da.chunk.css",
+    "static/js/main.eabfc8f9.chunk.js"
+  ]
+}
