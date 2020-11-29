@@ -13,14 +13,22 @@ serviceWorkerRegistration.register();
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
 
+//Set the correct size of the map
+let mapContainer = document.getElementById("map");
+let availableHeight =  (window.innerHeight - 64) + 'px';
+let availableWidth = window.innerWidth + 'px';
+
+mapContainer.style.width = availableWidth;
+mapContainer.style.height = availableHeight;
 
 // Import the map
 mapboxgl.accessToken = 'pk.eyJ1IjoianVyaXNvbyIsImEiOiIzNmVlOTA1YTVlNjliNmE5ZmYyZTA0M2NhZjlkZmFhYyJ9.B_qrLs29LUIpcJaOLSEk2A';
+
 var map = new mapboxgl.Map({
     container: 'map',
-    style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
-    center: [7, 7], // starting position [lng, lat]
-    zoom: 9 // starting zoom
+    style: 'mapbox://styles/mapbox/dark-v10', // stylesheet location
+    center: [18, 59], // starting position [lng, lat]
+    zoom: 20 // starting zoom
 });
 
 let geoLocate = new mapboxgl.GeolocateControl({
@@ -31,3 +39,7 @@ let geoLocate = new mapboxgl.GeolocateControl({
 })
 
 map.addControl(geoLocate);
+
+map.on('load', () => {
+  geoLocate.trigger()
+} )
