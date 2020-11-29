@@ -42,4 +42,14 @@ map.addControl(geoLocate);
 
 map.on('load', () => {
   geoLocate.trigger()
-} )
+})
+
+document.getElementById("turretButton").addEventListener("click", () => {
+    if ("geolocation" in navigator) { 
+        navigator.geolocation.getCurrentPosition(position => { 
+            console.log(position.coords.latitude, position.coords.longitude); 
+
+            // ADD A TURRET!!!
+        }); 
+    }
+});
