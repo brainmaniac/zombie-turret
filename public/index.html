@@ -26,11 +26,24 @@
     <link
       href="https://api.mapbox.com/mapbox-gl-js/v1.10.1/mapbox-gl.css"
       rel="stylesheet"
-    />    
+    />
+
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
   </head>
   <body class="bg-gray-800">
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+
+    <p class="absolute z-10 font-mono top-0 font-black p-4 text-xl text-red-500">
+      Zombie Turret
+    </p>
+
+    <div id='map'></div>
+
+    <button class="w-full text-white flex justify-center h-64 items-center font-bold bg-red-700 sha
+dow-2xl text-lg">
+      Build turret here!
+    </button>
+
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
