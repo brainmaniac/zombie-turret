@@ -11,13 +11,20 @@ const MapboxMap = ReactMapboxGl({
       'pk.eyJ1IjoianVyaXNvbyIsImEiOiIzNmVlOTA1YTVlNjliNmE5ZmYyZTA0M2NhZjlkZmFhYyJ9.B_qrLs29LUIpcJaOLSEk2A'
   });
 
+let availableHeight =  (window.innerHeight - 64) + 'px'
+let availableWidth = window.innerWidth + 'px'
+
+console.log('height: ', availableHeight)
+console.log('width: ', availableWidth)
+
 function Map() {
+
   return (
         <MapboxMap
             style="mapbox://styles/mapbox/dark-v10"
             containerStyle={{
-                height: '100vh',
-                width: '100vw'
+                height: availableHeight,
+                width: availableWidth
             }}
         >
             <MapContext.Consumer>
@@ -30,19 +37,19 @@ function Map() {
                         trackUserLocation: true
                     })
 
-                    map.addControl(geolocate);                   
+                    map.addControl(geolocate);
 
                     setTimeout(() => {
                         geolocate.trigger();
                     }, 1000);
-                    
-                    
+
+
                 }}
             </MapContext.Consumer>
 
             <Layer type="symbol" id="marker" layout={{ 'icon-image': 'marker-15' }}>
                 <Feature coordinates={[-0.481747846041145, 51.3233379650232]} />
-            </Layer>            
+            </Layer>
         </MapboxMap>
   );
 }
