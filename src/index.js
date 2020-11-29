@@ -38,6 +38,14 @@ let geoLocate = new mapboxgl.GeolocateControl({
   trackUserLocation: true
 })
 
+geoLocate.on('geolocate', (event) => {
+    console.log('located!', event)
+    map.latestUserPosition = {
+        lat: event.coords.latitude,
+        lng: event.coords.longitude,
+    }
+}); 
+
 map.addControl(geoLocate);
 
 map.on('load', () => {
@@ -45,11 +53,8 @@ map.on('load', () => {
 })
 
 document.getElementById("turretButton").addEventListener("click", () => {
-    if ("geolocation" in navigator) { 
-        navigator.geolocation.getCurrentPosition(position => { 
-            console.log(position.coords.latitude, position.coords.longitude); 
-
-            // ADD A TURRET!!!
-        }); 
-    }
+    console.log("PRESSED THE BUTTON", map.latestUserPosition)
+    var marker = new mapboxgl.Marker()
+        .setLngLat([map.latestUserPosition.lng, map.latestUserPosition.lat])
+        .addTo(map);    
 });
