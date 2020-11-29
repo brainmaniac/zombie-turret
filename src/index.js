@@ -27,8 +27,8 @@ mapboxgl.accessToken = 'pk.eyJ1IjoianVyaXNvbyIsImEiOiIzNmVlOTA1YTVlNjliNmE5ZmYyZ
 var map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/dark-v10', // stylesheet location
-    center: [18, 59], // starting position [lng, lat]
-    zoom: 20 // starting zoom
+    center: [18.1305344, 59.2805888], // starting position [lng, lat]
+    zoom: 8 // starting zoom
 });
 
 let geoLocate = new mapboxgl.GeolocateControl({
@@ -44,7 +44,7 @@ geoLocate.on('geolocate', (event) => {
         lat: event.coords.latitude,
         lng: event.coords.longitude,
     }
-}); 
+});
 
 map.addControl(geoLocate);
 
@@ -54,11 +54,11 @@ map.on('load', () => {
 
 document.getElementById("turretButton").addEventListener("click", () => {
     console.log("PRESSED THE BUTTON", map.latestUserPosition)
-    
+
     var el = document.createElement('div');
     el.className = 'marker';
 
     new mapboxgl.Marker(el)
         .setLngLat([map.latestUserPosition.lng, map.latestUserPosition.lat])
-        .addTo(map);    
+        .addTo(map);
 });
