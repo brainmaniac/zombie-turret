@@ -54,9 +54,11 @@ map.on('load', () => {
 
 document.getElementById("turretButton").addEventListener("click", () => {
     console.log("PRESSED THE BUTTON", map.latestUserPosition)
-    var marker = new mapboxgl.Marker({
-        icon: 'https://i.kisscc0.com/20180813/jpe/kisscc0-eiffel-tower-fortified-tower-computer-icons-teleco-rpg-map-symbols-round-tower-5b711801372a71.207371341534138369226.png'
-    })
+    
+    var el = document.createElement('div');
+    el.className = 'marker';
+
+    new mapboxgl.Marker(el)
         .setLngLat([map.latestUserPosition.lng, map.latestUserPosition.lat])
         .addTo(map);    
 });
